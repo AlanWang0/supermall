@@ -1,19 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  
+    <router-view/>
+
+    <MainTabBar class="MainTabBar"/>
+  
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainTabBar from 'components/content/mainTabbar/MainTabBar.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MainTabBar
+    
   }
 }
+
+
 </script>
 
 <style>
@@ -23,6 +30,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  //margin-top: 60px;
+  //background-color:green;
+}
+.MainTabBar{
+  z-index: 20;
+  background-color: tomato;
 }
 </style>
