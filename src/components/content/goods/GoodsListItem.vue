@@ -1,6 +1,6 @@
 <template>
     <div class="goods-item">
-        <img :src="goodsItem.show.img" alt="">
+        <img :src="goodsItem.show.img" alt="" @load='imageLoad'>
         <div class="goods-info">
             <p>{{goodsItem.title}}</p>
             <span class="price">{{goodsItem.price}}</span>
@@ -20,6 +20,13 @@ export default {
             }
 
         }
+    },
+    methods:{
+        imageLoad(){
+            //console.log("imageLoad1ss");
+            this.$bus.$emit('itemImageLoad')
+            
+        }
     }
 }
 </script>
@@ -31,7 +38,7 @@ export default {
     position: relative;
     width:48%;
     z-index: -500;
-    //padding: 2px;
+    
     
 }
 .goods-item img{

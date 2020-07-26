@@ -1,8 +1,6 @@
 <template>
     <div class="goods">
         <GoodsListItem v-for="item in goods" :goodsItem="item"></GoodsListItem>
-        
-        
     </div>
 </template>
 
@@ -17,7 +15,7 @@ export default {
         goods:{
             type:Array,
             default(){
-                return []
+                return [] 
             }
         }
     }
